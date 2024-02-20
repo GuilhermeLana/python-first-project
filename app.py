@@ -15,6 +15,8 @@ def exibir_nome_do_programa():
     """)
 
 def exibir_opcoes():
+    ''' Essa função é responsável por exibir as opções do menu '''
+
     print('1. Cadastrar restaurante')
     print('2. Listar restaurantes')
     print('3. Alternar status restaurante')
@@ -28,6 +30,17 @@ def retornar_menu_inicial():
     main()
 
 def cadastrar_novo_restaurante():
+    ''' Essa função é responsável por cadastrar um novo restaurante 
+    
+    Inputs:
+    - Nome do restaurante
+    - Categoria
+
+    Outputs:
+    - Adiciona um novo restaurante a lista de restaurantes
+    
+    '''
+
     exibir_subtitulo('Cadastro de novos restaurantes')
     nome_do_restaurante = input('Digite o nome do restaurante: ')
     categoria = input(f'Digite a categoria do restaurante {nome_do_restaurante}: ')
@@ -37,6 +50,8 @@ def cadastrar_novo_restaurante():
     retornar_menu_inicial() 
 
 def listar_restaurantes():
+    ''' Essa função é responsável por listar os dados dos restaurantes '''
+
     exibir_subtitulo('Listando Restaurantes')
     print(f'{'Nome do restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | Status')
     for restaurante in restaurantes:
@@ -48,6 +63,8 @@ def listar_restaurantes():
     retornar_menu_inicial()
 
 def alternar_status_restaurante():
+    ''' Essa função é responsável por alterar o status do restaurante escolhido '''
+    
     exibir_subtitulo('Alternando status do restaurante')
     nome_restaurante = input('Digite o nome do restaurante que deseja alternar o status: ')
     restaurante_encontrado = False
